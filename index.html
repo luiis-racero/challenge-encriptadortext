@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <section class="contenedor">
+        <div class="contenedor_img">
+            <img src="img/logo.png" alt=""  class="logo">
+        </div>
+            
+
+        <div class="contenedor_separador">
+
+            <div class="contenedor_encriptador">
+
+                <div class="contenedor_textarea">
+                    <textarea name="" id="ingresar_Texto" placeholder="Ingrese el texto aqui"></textarea>
+                </div>
+
+                <div class="contenedor_advertencia">
+                    <img src="/img/Frame 1.png" alt="">
+                </div>
+                
+                <div class="contenedor_botones">
+                    <button onclick="btnEncriptador()">Encriptar</button>
+                    <button onclick="btnDesencriptar()">Desencriptar</button>
+                </div>
+            </div>
+    
+            <div class="contenedor_desencriptador">
+                <div class="contenedor_derecho">
+                    <textarea name="" id="encriptar_Texto" readonly="readonly"></textarea>
+                    <span id="mensaje">Ningun mensaje fue encontrado</span>
+                    <p id="parrafo">Ingrese el texto que desees <br> encriptar o desencriptar</p>
+                    <div class="contenedor_btn_copiar" id="boton_copiar">
+                        <button onclick="copiar()">Copiar</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="fondo-opacado" id="fondo-opacado"></div> 
+        <div class="carta" id="error">
+            <i class="fa-solid fa-x" onclick="hideCard('error')"></i>
+
+            <div class="carta_advertencia">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <div class="carta_mensaje">
+                <p>Ooops!</p>
+                <span>No se encontraron datos para procesar</span>
+            </div>
+        </div>
+
+       
+
+        <div class="carta" id="error_mayus">
+            <i class="fa-solid fa-x" onclick="hideCard('error_mayus')"></i>
+    
+            <div class="carta_advertencia">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <div class="carta_mensaje">
+                <p>Ooops!</p>
+                <span>No se puede procesar con mayusculas ni acentos</span>
+            </div>
+        </div>
+
+        <div class="carta" id="copiado">
+            <i class="fa-solid fa-x" onclick="hideCard('copiado')"></i>
+           
+            <div class="carta_advertencia">
+                <i class="fa-solid fa-thumbs-up"></i>
+            </div>
+            <div class="carta_mensaje">
+                <p>Exito!</p>
+                <span>el texto ha sido copiado exitosamente</span>
+            </div>
+        </div>
+
+        <div class="carta" id="copiado_error">
+            <i class="fa-solid fa-x" onclick="hideCard('copiado_error')"></i>
+
+            <div class="carta_advertencia">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <div class="carta_mensaje">
+                <p>Ooops!</p>
+                <span>No se pudo copiar el texto. Por favor, intente nuevamente</span>
+            </div>
+        </div>
+
+
+    </section>
+    <script src="https://kit.fontawesome.com/4108625986.js" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
