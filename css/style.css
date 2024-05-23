@@ -138,7 +138,7 @@
 .contenedor_derecho textarea{
     height: 70%;
     width: 100%;
-    background: url(/img/muneco.png);
+    background: url(../img/muneco.png);
     background-repeat: no-repeat;
     background-position: center;
     font-size: 20px;
